@@ -1,0 +1,13 @@
+/* Chitin — desktop notifications. */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+html:has(> body.DesktopToastContainer),
+html body.DesktopToastContainer { background: transparent !important; }
+html .DesktopToastContainer .DesktopToastBackground,
+html .DesktopToastContainer .DesktopToastTemplate { background: transparent !important; }
+/* CHITIN notifications */
+html .DesktopToastContainer .DesktopToastPopup { border-radius: 26px 8px 26px 8px !important; border: 1px solid rgba(216,207,186,.2) !important; background: #17150F !important; }
+html .DesktopToastContainer .DesktopToastTemplate :is(.Header .Title,.GroupMessageUserName,.IngameTitle) { font-family: Constantia, Georgia, serif !important; letter-spacing: .14em; text-transform: uppercase; color: #D8CFBA !important; }
+html .DesktopToastContainer .DesktopToastTemplate :is(.StandardNotificationDescription,.GroupMessageBody,.StandardNotificationSubText) { color: #B2A994 !important; }
+html .DesktopToastContainer .DesktopToastTemplate :is(.AppLogo,.StandardLogoDimensions), html .DesktopToastContainer .DesktopToastTemplate .AppLogo :is(.Container,img) { border-radius: 40% 60% 55% 45% !important; }

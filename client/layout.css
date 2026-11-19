@@ -1,0 +1,57 @@
+/* ==========================================================================
+   CHITIN — layout: a spine.
+     · Navigation is a horizontal SPINE along the bottom centre: four vertebrae
+       (Store / Library / Community / You) threaded on a cord; the active one is
+       bone-white and the cord glows toward it
+     · Above it, two grown panels: the game list and the page
+     · A heartbeat monitor (ECG trace, BPM, time) in the title bar — the pulse
+       quickens while a game runs
+     · Add / downloads / friends are three seed pods to the right of the spine
+   ========================================================================== */
+html .Library > .Container { padding: 8px 18px 88px !important; gap: 14px !important; }
+html .Library > .Container > .LibraryWindowDivider { opacity: 0; }
+
+/* The spine */
+html .TopBar > .SuperNavBar { position: fixed !important; left: 50% !important; right: auto !important; top: auto !important; bottom: 14px !important; transform: translateX(-50%) !important; width: auto !important; height: 60px !important; z-index: 31; }
+html .SuperNavBar .SuperNav { height: 60px !important; margin: 0 !important; padding: 0 30px !important; gap: 14px !important; background: transparent !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; position: relative; align-items: center !important; }
+html .SuperNavBar .SuperNav::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 6px; margin-top: -3px; border-radius: 6px; z-index: -1;
+    background: repeating-linear-gradient(90deg, var(--ch-bone-dim) 0 3px, transparent 3px 7px), linear-gradient(90deg, transparent, color-mix(in srgb, var(--ch-bone) 30%, transparent) 15% 85%, transparent); opacity: .6; }
+html .SuperNav > svg.Arrow { width: 26px !important; height: 26px !important; padding: 5px !important; border-radius: 50% !important; background: var(--ch-flesh-2) !important; box-shadow: inset 0 0 0 1px var(--ch-line-2); }
+html .SuperNav .SuperNavMenu { height: 60px !important; display: flex; align-items: center; }
+html .SuperNav .SuperNavMenu > .MenuButton {
+    position: relative; height: 40px !important; min-width: 110px; padding: 0 20px !important; justify-content: center !important;
+    border-radius: 45% 45% 40% 40% / 60% 60% 40% 40% !important; background: radial-gradient(120% 140% at 30% 20%, #3A352C, #221F19 70%) !important;
+    box-shadow: inset 0 0 0 1px var(--ch-line-2), inset 0 -6px 10px rgba(0,0,0,.4), 0 6px 14px rgba(0,0,0,.6) !important;
+    font-family: var(--ch-head) !important; font-size: 11px !important; font-weight: 400 !important; letter-spacing: .26em !important; text-transform: uppercase !important; color: var(--t-fg-2) !important;
+    transition: transform .5s cubic-bezier(.3,1.5,.5,1), background .4s !important;
+}
+/* Transverse processes: small bony wings either side of each vertebra */
+html .SuperNav .SuperNavMenu > .MenuButton::before, html .SuperNav .SuperNavMenu > .MenuButton::after {
+    content: "" !important; position: absolute !important; top: 50% !important; width: 14px !important; height: 10px !important; margin-top: -5px; display: block !important; opacity: 1 !important; transform: none !important;
+    background: radial-gradient(100% 100% at 50% 50%, #3A352C, #221F19) !important; box-shadow: inset 0 0 0 1px var(--ch-line-2) !important;
+}
+html .SuperNav .SuperNavMenu > .MenuButton::before { left: -10px !important; border-radius: 60% 20% 20% 60% !important; }
+html .SuperNav .SuperNavMenu > .MenuButton::after { right: -10px !important; left: auto !important; border-radius: 20% 60% 60% 20% !important; }
+html .SuperNav .SuperNavMenu:hover > .MenuButton { transform: translateY(-3px); color: var(--ch-bone) !important; }
+html.mr-js .SuperNav .SuperNavMenu.Selected > .MenuButton, html .SuperNav .SuperNavMenu.Selected > .MenuButton {
+    background: var(--ch-bonegrad) !important; color: #15130F !important; transform: translateY(-4px) scale(1.06);
+    box-shadow: inset 0 -6px 10px rgba(0,0,0,.25), 0 0 26px color-mix(in srgb, var(--ch-bone) 30%, transparent), 0 8px 18px rgba(0,0,0,.6) !important;
+}
+html .SuperNav .SuperNavMenu.Selected > .MenuButton::before, html .SuperNav .SuperNavMenu.Selected > .MenuButton::after { background: var(--ch-bonegrad) !important; }
+html .SuperNav .mr-nav-indicator { display: none !important; }
+
+/* Heartbeat monitor */
+html .od-hud { position: fixed !important; left: 50%; top: 4px; transform: translateX(-50%); height: 32px; margin: 0 !important; z-index: 32; pointer-events: none; display: flex; align-items: center; gap: 12px; padding: 0 14px;
+    border-radius: 999px; background: rgba(11,10,9,.7); box-shadow: inset 0 0 0 1px var(--ch-line); font: 11px var(--ch-mono); letter-spacing: .14em; color: var(--t-fg-3); white-space: nowrap; }
+html .od-hud svg { width: 120px; height: 22px; overflow: visible; }
+html .od-hud svg polyline { fill: none; stroke: var(--ch-ochre); stroke-width: 1.6; stroke-linejoin: round; stroke-dasharray: 360; animation: ch-ecg var(--beat, 1.6s) linear infinite; filter: drop-shadow(0 0 3px var(--ch-ochre)); }
+html .od-hud b { font-weight: 400; color: var(--ch-bone); }
+html .od-hud .heart { width: 10px; height: 10px; background: var(--ch-ochre); border-radius: 50% 50% 45% 45%; animation: ch-pulse var(--beat, 1.6s) ease-in-out infinite; }
+
+/* Seed pods */
+html .BottomBar { left: auto !important; right: 24px !important; bottom: 22px !important; margin: 0 !important; height: 44px !important; width: auto !important; gap: 10px !important; padding: 0 !important; z-index: 31; }
+html .BottomBar::before { display: none !important; }
+html .BottomBar .DownloadStatus::before, html .BottomBar .DownloadStatus::after { display: none !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton) { height: 40px !important; width: 40px !important; padding: 0 !important; justify-content: center; border-radius: 46% 54% 50% 50% / 55% 50% 50% 45% !important; background: radial-gradient(120% 140% at 30% 20%, #3A352C, #221F19 70%) !important; box-shadow: inset 0 0 0 1px var(--ch-line-2), 0 6px 14px rgba(0,0,0,.6) !important; color: var(--t-fg-2) !important; transition: transform .5s cubic-bezier(.3,1.5,.5,1) !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton):hover { transform: scale(1.1); background: var(--ch-bonegrad) !important; color: #15130F !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton) :is(.Text, .Queue) { display: none !important; }

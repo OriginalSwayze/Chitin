@@ -1,0 +1,14 @@
+/* Chitin — context menus and dropdown menus (each is its own window). */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+html, body { background: transparent !important; }
+html body .contextMenu.ContextMenuPosition,
+html body .contextMenu { background: transparent !important; border: none !important; box-shadow: none !important; }
+/* CHITIN menus */
+html .contextMenu .contextMenuContents, html .contextMenu .NotificationsMenu { border-radius: 22px 8px 22px 8px !important; border: 1px solid rgba(216,207,186,.2) !important; background: #17150F !important; padding: 6px !important; box-shadow: 0 20px 44px rgba(0,0,0,.7) !important; }
+html .contextMenu .contextMenuContents .contextMenuItem { border-radius: 999px !important; padding: 6px 16px !important; background: transparent !important; color: #E4DCCB !important; font-family: Constantia, Georgia, serif !important; font-size: 13px !important; letter-spacing: .06em !important; }
+html .contextMenu .contextMenuContents .contextMenuItem:not(.disabled):is(:hover,:focus,.active) { background: radial-gradient(120% 140% at 30% 20%, #F2EBDA, #D8CFBA 40%, #8E8676) !important; color: #15130F !important; }
+html .contextMenu .contextMenuContents .contextMenuItem.disabled { opacity: .35; }
+html .contextMenu .contextMenuContents hr.Separator, html .contextMenu hr { border: none !important; height: 1px !important; margin: 5px 10px !important; background: rgba(216,207,186,.18) !important; }
+html .contextMenu .contextMenuContents .contextMenuItem.ContextMenuAction svg :is(path,polygon,rect,circle) { fill: currentColor !important; }

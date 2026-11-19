@@ -1,0 +1,15 @@
+/* Chitin — the "Sign in to Steam" window. */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+@import url("./core/backdrop.css");
+html .Login, html .Login.AnimatedBackground, html .LoginAnimatedBackground,
+html .Login .LoginStatusContainer, html .Login .SpinnerLoaderContainer { background: transparent !important; }
+html .Login.AnimatedBackground::before, html .LoginAnimatedBackground::after, html .Login video { display: none !important; }
+html .Login .SpinnerLoaderContainer { position: relative; }
+html .Login .SpinnerLoaderContainer > img { opacity: 0 !important; }
+/* CHITIN sign-in */
+html .Login .SpinnerLoaderContainer::before { content: "AWAKENING"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font: 16px Constantia, Georgia, serif; letter-spacing: .6em; color: #D8CFBA; white-space: nowrap; animation: ch-pulse 1.4s ease-in-out infinite; }
+html .Login .ProgressBar { border-radius: 999px !important; background: radial-gradient(120% 140% at 30% 20%, #F2EBDA, #D8CFBA 40%, #8E8676) !important; }
+html .Login .Avatar img { border-radius: 40% 60% 55% 45% !important; }
+html .Login .UserContainer > .PersonaName { font-family: Constantia, Georgia, serif !important; letter-spacing: .3em; text-transform: uppercase; color: #D8CFBA !important; }

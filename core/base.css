@@ -1,0 +1,16 @@
+/* CHITIN — base: slow, organic motion. */
+html, body { font-family: var(--ch-body) !important; color: #E4DCCB; }
+::selection { background: var(--ch-bone); color: #15130F; }
+:where(:focus-visible) { outline: 1px solid var(--ch-ochre); outline-offset: 3px; }
+::-webkit-scrollbar { width: 8px; height: 8px; background: transparent; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--ch-ribs), var(--ch-flesh-2); border-radius: 8px; box-shadow: inset 0 0 0 1px var(--ch-line-2); }
+::-webkit-scrollbar-thumb:hover { background: var(--ch-bonegrad); }
+::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+::-webkit-scrollbar-corner { background: transparent; }
+@keyframes mr-fade-up { from { opacity: 0; transform: scale(.985); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes ch-breathe { 0%, 100% { box-shadow: inset 0 0 0 1px var(--ch-line), 0 0 30px rgba(0,0,0,.6), 0 0 0 0 color-mix(in srgb, var(--ch-bone) 0%, transparent); } 50% { box-shadow: inset 0 0 0 1px var(--ch-line-2), 0 0 30px rgba(0,0,0,.6), 0 0 26px 2px color-mix(in srgb, var(--ch-bone) 7%, transparent); } }
+@keyframes ch-pulse { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.06); } 24% { transform: scale(1); } 36% { transform: scale(1.03); } 48% { transform: scale(1); } }
+@keyframes ch-ecg { from { stroke-dashoffset: 360; } to { stroke-dashoffset: 0; } }
+@keyframes ch-morph { 0%, 100% { border-radius: 42% 58% 61% 39% / 45% 39% 61% 55%; } 33% { border-radius: 58% 42% 38% 62% / 55% 61% 39% 45%; } 66% { border-radius: 39% 61% 52% 48% / 62% 45% 55% 38%; } }
+@keyframes ch-out { to { opacity: 0; visibility: hidden; } }

@@ -1,0 +1,16 @@
+/* CHITIN — controls */
+html .DialogButton { border-radius: 999px !important; background: var(--ch-flesh-2) !important; box-shadow: inset 0 0 0 1px var(--ch-line-2) !important; font-family: var(--ch-head) !important; text-transform: uppercase !important; letter-spacing: .18em !important; font-size: 11px !important; }
+html .DialogButton:not(.Disabled):not(:disabled):hover { background: color-mix(in srgb, var(--ch-bone) 14%, var(--ch-flesh-2)) !important; transform: none !important; }
+html .DialogButton.Primary, html button.DialogButton.Primary { background: var(--ch-bonegrad) !important; color: #15130F !important; }
+html :is(.DialogInput, .DialogTextInputBase), html .DialogDropDown { border-radius: 14px !important; background-color: var(--ch-void) !important; border: 1px solid var(--ch-line) !important; }
+html .ToggleRail { border-radius: 999px !important; }
+html .Toggle.On .ToggleRail, html .Toggle[class*="On"] .ToggleRail { background: var(--ch-ochre) !important; }
+html .ToggleSwitch { background: var(--ch-bonegrad) !important; }
+html .GenericConfirmDialog, html .ModalPosition_Content > .DialogContent { border-radius: var(--ch-shape) !important; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'300'%20height%3D'300'%3E%3Cfilter%20id%3D't'%3E%3CfeTurbulence%20type%3D'turbulence'%20baseFrequency%3D'.012%20.02'%20numOctaves%3D'4'%20seed%3D'4'%2F%3E%3CfeColorMatrix%20values%3D'0%200%200%200%20.55%20%200%200%200%200%20.5%20%200%200%200%200%20.42%20%200%200%200%20.09%200'%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20filter%3D'url(%23t)'%2F%3E%3C%2Fsvg%3E") 0 0 / 300px 300px, linear-gradient(160deg, var(--ch-flesh-2), var(--ch-flesh)) !important; box-shadow: inset 0 0 0 1px var(--ch-line-2), 0 30px 60px rgba(0,0,0,.7) !important; }
+html .DialogHeader { font-family: var(--ch-head) !important; font-weight: 400 !important; letter-spacing: .3em !important; text-transform: uppercase !important; }
+html .PagedSettingsDialog_PageListColumn .PagedSettingsDialog_Title { background: none !important; -webkit-text-fill-color: var(--ch-bone); font-family: var(--ch-head) !important; font-weight: 400 !important; letter-spacing: .34em !important; text-transform: uppercase !important; }
+html .PagedSettingsDialog_PageList .PagedSettingsDialog_PageListItem { border-radius: 999px !important; font-family: var(--ch-head); letter-spacing: .08em; }
+html .PagedSettingsDialog_PageList .PagedSettingsDialog_PageListItem.Active { background: var(--ch-bonegrad) !important; color: #15130F !important; box-shadow: none !important; }
+html .PagedSettingsDialog_PageList .PagedSettingsDialog_PageListItem.Active * { color: #15130F !important; fill: #15130F !important; }
+html .PagedSettingsDialog_PageList .PagedSettingsDialog_PageListItem.Active::before { display: none !important; }
+html .PagedSettingsDialog .SettingsDialogSubHeader { color: var(--ch-ochre) !important; font-family: var(--ch-head) !important; letter-spacing: .2em; text-transform: uppercase; }
