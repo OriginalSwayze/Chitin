@@ -1,6 +1,6 @@
 # Chitin
 
-**A biomechanical interface, grown rather than built.** Bone white, charcoal, dull metal and a sickly ochre. A [Millennium](https://steambrew.app) theme for the Steam client.
+**A biomechanical interface, grown rather than built.** Bone white, charcoal, dull metal and a sickly ochre. A Steam client theme for [Beyond Steam](https://github.com/OriginalSwayze/Beyond-Steam) and [Millennium](https://steambrew.app).
 
 ![Chitin: library](media/library.gif)
 
@@ -14,13 +14,14 @@
 
 ## Install
 
-1. Install [Millennium](https://steambrew.app).
-2. Find **Chitin** in the Millennium theme browser, or download this repository into `Steam/millennium/themes/Chitin`.
-3. Open **Steam → Millennium → Themes** and pick **Chitin**.
+- **With [Beyond Steam](https://github.com/OriginalSwayze/Beyond-Steam) (easiest):** in Steam press **Ctrl+Shift+B**, open
+  **Get more** and install **Chitin**.
+- **By hand:** download **Chitin.zip** from the [latest release](https://github.com/OriginalSwayze/Chitin/releases/latest) and unzip
+  it into `%APPDATA%\Beyond Steam\themes\Chitin` (Beyond Steam) or `Steam\millennium\themes\Chitin` (Millennium).
 
 ## Options
 
-Open **Millennium → Themes → Chitin** to change:
+In Beyond Steam's **Theme options** tab (or **Millennium → Themes → Chitin**) you can change:
 
 Tissue (Bone, Ivory & rust, Bronze, Ash) · Breathing · Density · What's New · Readout · Startup screen · Motion · Cover hover · Privacy · Contrast · Focus rings · Text size
 
